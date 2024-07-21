@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Paul Aries - Model Viewer</title>
+</head>
+<body>
+
+    <header>
+        
+    </header>
+
+    <div class="wrapper">
+
+        <section>
+            <div class="title">
+                <h1>VT100</h1>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="20" viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#000000" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+                </button>
+            </div>
+            <div class="chips">
+                <p>1978</p>
+                <p>12 IN.</p>
+                <p>3KB RAM</p>
+                <p>8KB ROM</p>
+                <p>175 BYTE NVRAM</p>
+            </div>
+            <p>
+                The VT100 is a video terminal that was introduced by Digital Equipment Corporation (DEC) in 1978. It became highly influential in the computing world, setting a standard for terminal emulators. The VT100 featured a 12-inch screen and could display 80 or 132 characters per line, with a typical display size of 24 lines.
+            </p>
+            <p>
+                It supported an extensive range of control codes, allowing for advanced text formatting and cursor control. The terminal was notable for its use of the ANSI X3.64 standard, which became the basis for many terminal emulators used in software today. The VT100 also introduced the ability to download custom character sets, enhancing its versatility.
+            </p>
+            <p>
+                The VT100 was widely used in various fields, from academic to business environments, due to its robustness and compatibility. The design and functionality of the VT100 have left a lasting legacy, influencing modern terminal emulators and interfaces. The computer had several advanced features for its time, such as smooth scrolling and a bright, clear display that made it easier to read text for extended periods. It included function keys that could be programmed for specific tasks, streamlining workflows and improving efficiency for users. Another notable feature was its modular design, which allowed for easy maintenance and upgrades.
+            </p>
+            <p>
+                The terminal could be connected to a wide range of computer systems, making it highly adaptable across different platforms and industries. It supported block mode operations, enabling efficient data entry and retrieval in applications like word processing and data management. The VT100's architecture was also influential in the development of subsequent terminals and personal computers.
+            </p>
+            <p>
+                Its popularity led to the creation of various clones and emulators, ensuring its design principles continued to be used long after the original hardware was obsolete. The VT100's impact on computing is still evident today, with its control codes and standards being integral to modern terminal emulation software.
+            </p>
+        </section>
+
+        <model-viewer class="model" src="./media/computer.glb" environment-image="./media/studio_dark.hdr" camera-controls shadow-intensity="1" auto-rotate="1"></model-viewer>
+    </div>
+
+    <footer>
+        <p>
+            by Paul Aries
+        </p>
+    </footer>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <script>
+
+        let section = document.querySelector("section")
+
+        let button = document.querySelector("button")
+        
+        button.addEventListener("click", dropdown = () => {
+            
+            if (section.style.height == "60px") {
+                section.style.height = "100%";
+                section.style.overflowY = "scroll";
+                button.style.transform = "rotate(180deg)";
+            } else {
+                section.style.height = "60px";
+                section.style.overflowY = "hidden";
+                button.style.transform = "rotate(0deg)";
+            }
+
+        })
+
+    </script>
+
+</body>
+</html>
